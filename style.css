@@ -13,21 +13,22 @@ body{
     rgba(65,184,131,1)0%,
     rgba(0,212,255,1)100%
     );
-    /* display: flex;
+    display: flex;
     align-items: center;
-    justify-content: center; */
+    justify-content: center;
 }
 
 
 .container{
     border: 2px solid #fff;
+    border-radius: 5px;
     padding: 30px 40px;
     width: 40%;
     min-width: 500px;
-    position: absolute;
+    /* position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
-    left: 50%;
+    left: 50%; */
 }
 
 .new-task-container{
@@ -81,6 +82,10 @@ body{
     align-items: center;
     margin-bottom: 6px;
     margin-top: 6px;
+}
+
+.task-item p{
+    cursor: pointer;
 }
 
 .task-item i{
