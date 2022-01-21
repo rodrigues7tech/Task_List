@@ -1,6 +1,7 @@
 const inputElement =  document.querySelector(".new-task-input");
 const addTasktButton = document.querySelector(".new-task-button");
 const tasksContainer = document.querySelector('.tasks-container');
+//let db = firebase.firestore();
 
 const validateInput = () => inputElement.value.trim().length > 0;
 
@@ -16,23 +17,29 @@ const handleAddTask = () => {
     const taskContent = document.createElement('p');
     taskContent.innerHTML = inputElement.value;
 
-    taskContent.addEventListener('click', () => handleClick(taskContent));
 
+    tasksContainer.appendChild(taskItemContainer);
+    
+    
+    taskContent.addEventListener('click', () => handleClick(taskContent));
+    
     const deleteItem = document.createElement('i');
     deleteItem.classList.add("far");
     deleteItem.classList.add("fa-trash-alt");
-
+    
     taskItemContainer.appendChild(taskContent);
     taskItemContainer.appendChild(deleteItem);
-
+    
     deleteItem.addEventListener('click', () => handleDeleteClick(taskItemContainer, taskContent));
-
+    
     tasksContainer.appendChild(taskItemContainer);
-
+    
     inputElement.value = "";
 
     updateLocalStorage();
 };
+
+
 
 const handleClick = (taskContent) => {
     const tasks = tasksContainer.childNodes;
