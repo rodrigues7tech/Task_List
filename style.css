@@ -26,6 +26,12 @@ body{
     text-shadow: 0 15px 30px rgb(0 0 0 / 30%);
 }
 
+.animate__animated.animate__pulse:hover{
+    cursor: pointer;
+    animation: animate__pulse;
+    animation-duration: 0.7s;
+}
+
 .container{
     border: 2px solid #fff;
     border-radius: 5px;
@@ -69,6 +75,9 @@ body{
     margin-left: 12px;
     cursor: pointer;
 }
+.new-task-button:hover{
+    background-color: #59be91;;
+}
 
 .tasks-container{
     background-color: #fff;
@@ -91,6 +100,10 @@ body{
 .task-item p{
     cursor: pointer;
     color: #41b883;
+    font-weight: 500;
+}
+.task-item p:hover{
+    color: #59be91;
 }
 
 .task-item i{
@@ -99,6 +112,9 @@ body{
     padding: 12px;
     border-radius: 5px;
     cursor: pointer;
+}
+.task-item i:hover{
+    background-color: #59be91;
 }
 
 
@@ -113,7 +129,6 @@ body{
 .completed{
     text-decoration: line-through;
 }
-
 
 /* MEDIA QUERIES */
 @media (max-width: 500.98px) { 
